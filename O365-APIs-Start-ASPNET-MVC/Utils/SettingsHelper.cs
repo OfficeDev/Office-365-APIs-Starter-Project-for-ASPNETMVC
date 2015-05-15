@@ -9,7 +9,7 @@ namespace O365_APIs_Start_ASPNET_MVC.Utils
     {
 
         private static string _clientId = ConfigurationManager.AppSettings["ida:ClientId"] ?? ConfigurationManager.AppSettings["ida:ClientID"];
-        private static string _appKey = ConfigurationManager.AppSettings["ida:AppKey"] ?? ConfigurationManager.AppSettings["ida:Password"];
+        private static string _clientSecret = ConfigurationManager.AppSettings["ida:ClientSecret"] ?? ConfigurationManager.AppSettings["ida:Password"];
         private static string _authorizationUri = ConfigurationManager.AppSettings["ida:AuthorizationUri"];
         private static string _graphResourceId = ConfigurationManager.AppSettings["ida:GraphResourceId"];
         private static string _tenantId = ConfigurationManager.AppSettings["ida:TenantID"];
@@ -27,11 +27,11 @@ namespace O365_APIs_Start_ASPNET_MVC.Utils
             }
         }
 
-        public static string AppKey
+        public static string ClientSecret
         {
             get
             {
-                return _appKey;
+                return _clientSecret;
             }
         }
 
