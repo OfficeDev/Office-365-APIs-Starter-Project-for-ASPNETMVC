@@ -51,7 +51,7 @@ namespace O365_APIs_Start_ASPNET_MVC
                         {
                             var code = context.Code;
 
-                            ClientCredential credential = new ClientCredential(SettingsHelper.ClientId, SettingsHelper.AppKey);
+                            ClientCredential credential = new ClientCredential(SettingsHelper.ClientId, SettingsHelper.ClientSecret);
                             String UserObjectId = context.AuthenticationTicket.Identity.FindFirst(ClaimTypes.NameIdentifier).Value;
 
                             AuthenticationContext authContext = new AuthenticationContext(SettingsHelper.Authority, new ADALTokenCache(UserObjectId));

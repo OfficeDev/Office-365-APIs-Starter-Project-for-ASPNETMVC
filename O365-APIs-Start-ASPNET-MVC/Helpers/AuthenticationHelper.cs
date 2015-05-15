@@ -30,7 +30,7 @@ namespace O365_APIs_Start_ASPNET_MVC.Helpers
                     {
                         var authResult = await authContext.AcquireTokenSilentAsync(SettingsHelper.DiscoveryServiceResourceId,
                                                                                    new ClientCredential(SettingsHelper.ClientId,
-                                                                                                        SettingsHelper.AppKey),
+                                                                                                        SettingsHelper.ClientSecret),
                                                                                    new UserIdentifier(userObjectId,
                                                                                                       UserIdentifierType.UniqueId));
 
@@ -44,7 +44,7 @@ namespace O365_APIs_Start_ASPNET_MVC.Helpers
                     {
                         var authResult = await authContext.AcquireTokenSilentAsync(dcr.ServiceResourceId,
                                                                                    new ClientCredential(SettingsHelper.ClientId,
-                                                                                                        SettingsHelper.AppKey),
+                                                                                                        SettingsHelper.ClientSecret),
                                                                                    new UserIdentifier(userObjectId,
                                                                                                       UserIdentifierType.UniqueId));
 
@@ -78,7 +78,7 @@ namespace O365_APIs_Start_ASPNET_MVC.Helpers
                     {
                         var authResult = await authContext.AcquireTokenSilentAsync(SettingsHelper.DiscoveryServiceResourceId,
                                                                                    new ClientCredential(SettingsHelper.ClientId,
-                                                                                                        SettingsHelper.AppKey),
+                                                                                                        SettingsHelper.ClientSecret),
                                                                                    new UserIdentifier(userObjectId,
                                                                                                       UserIdentifierType.UniqueId));
                         return authResult.AccessToken;
@@ -91,7 +91,7 @@ namespace O365_APIs_Start_ASPNET_MVC.Helpers
                     {
                         var authResult = await authContext.AcquireTokenSilentAsync(dcr.ServiceResourceId,
                                                                                    new ClientCredential(SettingsHelper.ClientId,
-                                                                                                        SettingsHelper.AppKey),
+                                                                                                        SettingsHelper.ClientSecret),
                                                                                    new UserIdentifier(userObjectId,
                                                                                                       UserIdentifierType.UniqueId));
 
