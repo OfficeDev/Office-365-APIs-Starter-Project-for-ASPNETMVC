@@ -1,0 +1,85 @@
+﻿@model IEnumerable<O365_APIs_Start_ASPNET_MVC.Models.EWSTaskItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Exchange Tasks<span class="refreshlink"> &nbsp;@Html.ActionLink("Refresh", "Index")</span></h1>
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.taskId)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.taskSubject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taskStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taskStartDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.taskId)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.taskSubject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.taskStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.taskStartDate)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+    }
+
+</table>
+<!--
+*********************************************************
+
+O365 APIs Starter Project for ASPNET MVC, https://github.com/OfficeDev/Office-365-APIs-Starter-Project-for-ASPNETMVC
+
+Copyright (c) Microsoft Corporation
+All rights reserved.
+
+MIT License:
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+""Software""), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*********************************************************
+-->
